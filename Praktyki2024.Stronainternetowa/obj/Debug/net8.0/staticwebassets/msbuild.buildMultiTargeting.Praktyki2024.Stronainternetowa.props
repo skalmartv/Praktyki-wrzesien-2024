@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Praktyki2024.Stronainternetowa.props" />
+</Project>
