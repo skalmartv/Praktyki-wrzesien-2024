@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9hAeeIwt3vk=",
+  "dgSpecHash": "RSexo9VU2vE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\skalm\\source\\repos\\Praktyki2024\\Praktyki2024.Stronainternetowa\\Praktyki2024.Stronainternetowa.csproj",
+  "projectFilePath": "C:\\Praktyki-wrzesien-2024\\Praktyki2024.Stronainternetowa\\Praktyki2024.Stronainternetowa.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\skalm\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.0\\microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\skalm\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\8.0.8\\microsoft.aspnetcore.mvc.razor.runtimecompilation.8.0.8.nupkg.sha512",

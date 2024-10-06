@@ -6,17 +6,24 @@
 }
 
 
-<p>
-    @Model.Pod11
-</p>
-<p>
-    @Model.Pod21
-</p>
-<p>
-    @Model.Pod31
-</p>
-<p>
-    @Model.Pod41
-<p>
-        @Model.Pod51
-</p>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4>Ilość samochodów według marki</h4>
+                </div>
+                <div class="card-body">
+                    <p><b>Mercedes:</b> @Model.Pod11</p>
+                    <p><b>BMW:</b> @Model.Pod21</p>
+                    <p><b>Audi:</b> @Model.Pod31</p>
+                    <p><b>Volvo:</b> @Model.Pod41</p>
+                    <p><b>Volkswagen:</b> @Model.Pod51</p>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-primary">Więcej informacji</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

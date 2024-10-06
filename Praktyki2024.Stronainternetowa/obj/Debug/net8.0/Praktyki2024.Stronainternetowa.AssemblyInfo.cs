@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Praktyki2024.Stronainternetowa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60690bec796253060958d19f1d5985a58cbab3d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Praktyki2024.Stronainternetowa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Praktyki2024.Stronainternetowa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

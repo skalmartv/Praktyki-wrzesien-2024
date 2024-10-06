@@ -4,11 +4,11 @@
     {
         public string Pod1 { get; set; }
         public string Pod2 { get; set; }
-        public string Pod3 { get; set; }
-        public string Pod4 { get; set; }
-        public string Pod5 { get; set; }
+        public float Pod3 { get; set; }
+        public bool Pod4 { get; set; }
+        public float Pod5 { get; set; }
 
-        public Strona1ViewModel(string pod1, string pod2, string pod3, string pod4, string pod5)
+        public Strona1ViewModel(string pod1, string pod2, float pod3, bool pod4, float pod5)
         {
             this.Pod1 = pod1;
             this.Pod2 = pod2;

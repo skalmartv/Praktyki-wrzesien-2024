@@ -2,20 +2,20 @@
 
 <h2>Formularz Kontaktowy</h2>
 
-<form asp-action="" method="post">
-    <div>
-        <label for="Name">Imię:</label>
-        <input type="text" id="Imie" name="Imie" value="@Model.Imie" required />
+<form asp-action="KontaktSubmit" method="post">
+    <div class="mb-3">
+        <label for="Imie" class="form-label">Imię:</label>
+        <input type="text" class="form-control" id="Imie" name="Imie" value="@Model.Imie" />
+    </div>
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" />
+    </div>
+    <div class="mb-3">
+        <label for="Wiadomosc" class="form-label">Wiadomość:</label>
+        <textarea class="form-control" id="Wiadomosc" name="Wiadomosc">@Model.Wiadomosc</textarea>
     </div>
     <div>
-        <label for="Email">Email:</label>
-        <input type="email" id="Email" name="Email" value="@Model.Email" required />
-    </div>
-    <div>
-        <label for="Wiadomosc">Wiadomość:</label>
-        <textarea id="Wiadomosc" name="Wiadomosc" required>@Model.Wiadomosc</textarea>
-    </div>
-    <div>
-        <button type="submit">Wyślij</button>
+        <button type="submit" class="btn btn-primary">Wyślij</button>
     </div>
 </form>

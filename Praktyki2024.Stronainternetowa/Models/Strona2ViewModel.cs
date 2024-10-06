@@ -2,13 +2,13 @@
 {
     public class Strona2ViewModel
     {
-        public string Pod11 { get; set; }
-        public string Pod21 { get; set; }
-        public string Pod31 { get; set; }
-        public string Pod41 { get; set; }
-        public string Pod51 { get; set; }
+        public int Pod11 { get; set; }
+        public int Pod21 { get; set; }
+        public int Pod31 { get; set; }
+        public int Pod41 { get; set; }
+        public int Pod51 { get; set; }
 
-        public Strona2ViewModel(string pod11, string pod21, string pod31, string pod41, string pod51)
+        public Strona2ViewModel(int pod11, int pod21, int pod31, int pod41, int pod51)
         {
             this.Pod11 = pod11;
             this.Pod21 = pod21;

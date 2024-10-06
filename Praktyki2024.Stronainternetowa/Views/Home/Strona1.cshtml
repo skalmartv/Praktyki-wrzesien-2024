@@ -5,18 +5,24 @@
 @{
 }
 
-
-<p>
-    @Model.Pod1
-</p>
-<p>
-    @Model.Pod2
-</p>
-<p>
-    @Model.Pod3
-</p>
-<p>
-    @Model.Pod4
-<p>
-    @Model.Pod5
-</p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4>Szczegóły pojazdu</h4>
+                </div>
+                <div class="card-body">
+                    <p><b>Marka:</b> @Model.Pod1</p>
+                    <p><b>Kolor:</b> @Model.Pod2</p>
+                    <p><b>Cena:</b> @Model.Pod3</p>
+                    <p><b>Czy Zepsuty:</b> @Model.Pod4</p>
+                    <p><b>Przebieg:</b> @Model.Pod5</p>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-success">Kup teraz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,59 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Praktyki2024.Stronainternetowa
 build_property.RootNamespace = Praktyki2024.Stronainternetowa
-build_property.ProjectDir = C:\Users\skalm\Source\Repos\Praktyki-wrzesie-2024\Praktyki2024.Stronainternetowa\
+build_property.ProjectDir = C:\Praktyki-wrzesien-2024\Praktyki2024.Stronainternetowa\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\skalm\Source\Repos\Praktyki-wrzesie-2024\Praktyki2024.Stronainternetowa
+build_property.MSBuildProjectDirectory = C:\Praktyki-wrzesien-2024\Praktyki2024.Stronainternetowa
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/Home/Index.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/Home/Kontakt.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Home/Kontakt.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxLb250YWt0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/Home/Privacy.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Home/KontaktSubmit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxLb250YWt0U3VibWl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/Home/Sklep.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Home/Sklep.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTa2xlcC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/Home/Strona1.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Home/Strona1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdHJvbmExLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/Home/Strona2.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Home/Strona2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdHJvbmEyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/Home/Strona3.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Home/Strona3.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdHJvbmEzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/Shared/Error.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/_ViewImports.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/_ViewStart.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/skalm/Source/Repos/Praktyki-wrzesie-2024/Praktyki2024.Stronainternetowa/Views/Shared/_Layout.cshtml]
+[C:/Praktyki-wrzesien-2024/Praktyki2024.Stronainternetowa/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-w109izomzy

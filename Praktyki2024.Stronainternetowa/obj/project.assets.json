@@ -940,11 +940,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\skalm\\source\\repos\\Praktyki2024\\Praktyki2024.Stronainternetowa\\Praktyki2024.Stronainternetowa.csproj",
+      "projectUniqueName": "C:\\Praktyki-wrzesien-2024\\Praktyki2024.Stronainternetowa\\Praktyki2024.Stronainternetowa.csproj",
       "projectName": "Praktyki2024.Stronainternetowa",
-      "projectPath": "C:\\Users\\skalm\\source\\repos\\Praktyki2024\\Praktyki2024.Stronainternetowa\\Praktyki2024.Stronainternetowa.csproj",
+      "projectPath": "C:\\Praktyki-wrzesien-2024\\Praktyki2024.Stronainternetowa\\Praktyki2024.Stronainternetowa.csproj",
       "packagesPath": "C:\\Users\\skalm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\skalm\\source\\repos\\Praktyki2024\\Praktyki2024.Stronainternetowa\\obj\\",
+      "outputPath": "C:\\Praktyki-wrzesien-2024\\Praktyki2024.Stronainternetowa\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\skalm\\AppData\\Roaming\\NuGet\\NuGet.Config",

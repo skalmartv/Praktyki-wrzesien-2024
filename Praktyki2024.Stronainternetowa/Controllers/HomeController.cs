@@ -22,11 +22,11 @@ namespace Praktyki2024.StronaInternetowa.Controllers
         public IActionResult Strona1()
         {
             var pod1 = new Strona1ViewModel(
-                "pod1",
-                "pod2",
-                "pod3",
-                "pod4",
-                "pod5"
+                "Mercedes",
+                "Z³oty",
+                12000,
+                false,
+                43400
             );
 
             return View(pod1);
@@ -36,11 +36,11 @@ namespace Praktyki2024.StronaInternetowa.Controllers
         public IActionResult Strona2()
         {
             var pod2 = new Strona2ViewModel(
-                "pod11",
-                "pod21",
-                "pod31",
-                "pod41",
-                "pod51"
+                16,
+                15,
+                14,
+                13,
+                12
             );
 
             return View(pod2);
@@ -58,11 +58,20 @@ namespace Praktyki2024.StronaInternetowa.Controllers
 
             return View(pod3);
         }
-        public IActionResult Kontakt()
-        {
-            return View(new KontaktViewModel());
-        }
-        public IActionResult Sklep()
+		
+			public IActionResult Kontakt()
+			{
+				return View(new KontaktViewModel());
+			}
+			[HttpPost]
+			public IActionResult KontaktSubmit()
+			{
+				// Po prostu zwracamy widok KontaktSubmit
+				return View("KontaktSubmit");
+			}
+	
+
+		public IActionResult Sklep()
         {
             return View(new SklepViewModel());
         }
@@ -70,7 +79,6 @@ namespace Praktyki2024.StronaInternetowa.Controllers
         {
             return View();
         }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
