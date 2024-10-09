@@ -13,17 +13,38 @@ namespace ScreenshotMaker
 			_browserFetcher = new BrowserFetcher();
 		}
 
-		public async Task<List<string>> GetImageAltsFromURL(string htmlUrl)
+	
+		public async Task GetDataAndImagesFromURL(string htmlUrl)
 		{
 			try
 			{
 				var client = new HttpClient();
 				var html = await client.GetStringAsync(htmlUrl);
-
 				var htmlDoc = new HtmlDocument();
 				htmlDoc.LoadHtml(html);
-				var imgTags = htmlDoc.DocumentNode.SelectNodes("//img");
 
+				var linkList = new List<string>();
+				var anchorTags = htmlDoc.DocumentNode.SelectNodes("//a[@href]");
+				if (anchorTags != null)
+				{
+					foreach (var tag in anchorTags)
+					{
+						var link = tag.GetAttributeValue("href", string.Empty);
+						if (!string.IsNullOrEmpty(link))
+						{
+							linkList.Add(link);
+						}
+					}
+				}
+
+				Console.WriteLine("Znalezione linki:");
+				foreach (var link in linkList)
+				{
+					Console.WriteLine(link);
+				}
+				Console.WriteLine("=======================================================================");
+
+				var imgTags = htmlDoc.DocumentNode.SelectNodes("//img");
 				var altList = new List<string>();
 
 				if (imgTags != null)
@@ -31,23 +52,20 @@ namespace ScreenshotMaker
 					foreach (var img in imgTags)
 					{
 						var altText = img.GetAttributeValue("alt", "brak atrybutu alt");
-						var src = img.GetAttributeValue("src", string.Empty);
-						altList.Add($"Alt: {altText}, Src: {src}");
+						altList.Add($"Alt: {altText}");
 					}
 				}
-
+				Console.WriteLine("Znalezione obrazy:");
 				foreach (var alt in altList)
 				{
 					Console.WriteLine(alt);
 				}
 
 				Console.WriteLine("=======================================================================");
-				return altList;
 			}
 			catch (Exception ex)
 			{
 				Console.WriteLine(ex.Message);
-				return null;
 			}
 		}
 
@@ -58,7 +76,7 @@ namespace ScreenshotMaker
 
 		public async Task CreateScreen(string url)
 		{
-			await new BrowserFetcher().DownloadAsync();
+			await _browserFetcher.DownloadAsync();
 
 			using var browser = await Puppeteer.LaunchAsync(new LaunchOptions
 			{
@@ -69,15 +87,17 @@ namespace ScreenshotMaker
 					Height = 3840,
 					IsLandscape = false,
 				},
-				Timeout = 3000,
+				Timeout = 30000, // Ustawienie d³u¿szego timeoutu
 				Args = options,
 				AcceptInsecureCerts = true,
 				EnqueueAsyncMessages = true
 			});
 
 			using var page = await browser.NewPageAsync();
-
-			var response = await page.GoToAsync(url);
+			var response = await page.GoToAsync(url, new NavigationOptions
+			{
+				WaitUntil = new[] { WaitUntilNavigation.Load, WaitUntilNavigation.DOMContentLoaded }
+			});
 
 			await page.SetViewportAsync(new ViewPortOptions
 			{
@@ -85,13 +105,12 @@ namespace ScreenshotMaker
 				Height = 3840
 			});
 
+			// Zrobienie zrzutu ekranu
 			await page.ScreenshotAsync(Path.Combine(Directory.GetCurrentDirectory(), "test_image_from_url_2.png"));
 
 			await browser.CloseAsync();
 
 			Console.WriteLine("Screenshot saved!");
 		}
-
-	
 	}
 }
