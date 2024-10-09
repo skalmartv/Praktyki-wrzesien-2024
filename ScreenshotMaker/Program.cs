@@ -1,13 +1,11 @@
 ﻿using ScreenshotMaker;
 
+Console.WriteLine("Podaj URL strony:");
+string url = Console.ReadLine(); 
+
 using var rendered = new ImageRenderer();
 
-
-var htmlContent = "https://www.whitepress.com/pl/baza-wiedzy/230/jak-zalozyc-bloga-w-wordpressie-krok-po-kroku";
-
-await rendered.GetDataFromURL(htmlContent);
-await rendered.CreateScreen(htmlContent);
-
-
+await rendered.GetImageAltsFromURL(url);  
+await rendered.CreateScreen(url);  
 Console.WriteLine("Wait for me: ");
 Console.Read();

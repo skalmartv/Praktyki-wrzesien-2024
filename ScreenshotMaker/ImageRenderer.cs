@@ -13,45 +13,42 @@ namespace ScreenshotMaker
 			_browserFetcher = new BrowserFetcher();
 		}
 
-		public async Task<byte[]> GetDataFromURL(string htmlUrl)
+		public async Task<List<string>> GetImageAltsFromURL(string htmlUrl)
 		{
 			try
 			{
 				var client = new HttpClient();
-				var linkList = new List<string>();
 				var html = await client.GetStringAsync(htmlUrl);
 
 				var htmlDoc = new HtmlDocument();
 				htmlDoc.LoadHtml(html);
+				var imgTags = htmlDoc.DocumentNode.SelectNodes("//img");
 
-				var anchorTags = htmlDoc.DocumentNode.SelectNodes("//a[@href]");
-				if (anchorTags != null)
+				var altList = new List<string>();
+
+				if (imgTags != null)
 				{
-					foreach (var tag in anchorTags)
+					foreach (var img in imgTags)
 					{
-						var link = tag.GetAttributeValue("href", string.Empty);
-
-						// Dodaj link do listy, jeśli nie jest pusty
-						if (!string.IsNullOrEmpty(link))
-						{
-							linkList.Add(link);
-						}
+						var altText = img.GetAttributeValue("alt", "brak atrybutu alt");
+						var src = img.GetAttributeValue("src", string.Empty);
+						altList.Add($"Alt: {altText}, Src: {src}");
 					}
 				}
 
-				// Wyświetlenie wszystkich znalezionych linków
-				foreach (var link in linkList)
+				foreach (var alt in altList)
 				{
-					Console.WriteLine(link);
+					Console.WriteLine(alt);
 				}
+
 				Console.WriteLine("=======================================================================");
+				return altList;
 			}
 			catch (Exception ex)
 			{
 				Console.WriteLine(ex.Message);
+				return null;
 			}
-
-			return null;
 		}
 
 		public void Dispose()
@@ -61,10 +58,8 @@ namespace ScreenshotMaker
 
 		public async Task CreateScreen(string url)
 		{
-			// Download the Chromium browser if needed
 			await new BrowserFetcher().DownloadAsync();
 
-			// Launch the browser
 			using var browser = await Puppeteer.LaunchAsync(new LaunchOptions
 			{
 				Headless = true,
@@ -80,26 +75,23 @@ namespace ScreenshotMaker
 				EnqueueAsyncMessages = true
 			});
 
-			// Create a new page
 			using var page = await browser.NewPageAsync();
 
-			// Navigate to the URL
 			var response = await page.GoToAsync(url);
 
-			// Set the viewport size if needed (optional)
 			await page.SetViewportAsync(new ViewPortOptions
 			{
 				Width = 2160,
 				Height = 3840
 			});
 
-			// Take the screenshot
 			await page.ScreenshotAsync(Path.Combine(Directory.GetCurrentDirectory(), "test_image_from_url_2.png"));
 
-			// Close the browser
 			await browser.CloseAsync();
 
 			Console.WriteLine("Screenshot saved!");
 		}
+
+	
 	}
 }
